@@ -4,7 +4,7 @@
              x:Class="NativeSorterSummary.View.SorterMainView">
   <StackLayout>
     <Picker x:Name="picker" VerticalOptions="Start" HorizontalOptions="Center"></Picker>
-  <Label x:Name="lblStatus" Text="Loading..." VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Red" FontSize="36" />
+    <Label x:Name="lblStatus" Text="Loading..." VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Red" FontSize="36" />
     <Button x:Name="btnGo" Text="Go!" />
     <Label x:Name="lblResult" Text="result" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White" FontFamily="Times" FontSize="10" />
   </StackLayout>

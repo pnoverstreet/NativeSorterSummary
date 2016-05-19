@@ -38,6 +38,8 @@
     <Compile Include="App.cs" />
     <Compile Include="Model\SorterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyCreds.cs" />
+    <Compile Include="ViewModel\SorterSummaryViewModel.cs" />
     <Compile Include="ViewModel\BuildingViewModel.cs" />
     <Compile Include="ViewModel\SorterViewModel.cs" />
     <Compile Include="View\SorterMainView.xaml.cs">

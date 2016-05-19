@@ -14,15 +14,13 @@ namespace NativeSorterSummary.View
     {
         private List<BuildingViewModel> _buildings = new List<BuildingViewModel>();
         private List<SorterViewModel> _sorters = new List<SorterViewModel>();
+        private List<SorterSummaryViewModel> _sorterSummary = new List<SorterSummaryViewModel>();
         public SorterMainView()
         {
             InitializeComponent();
             this.btnGo.Clicked += BtnGo_Clicked;
             this.lblStatus.Text = "Loading...";
-            _sorters.Add(new SorterViewModel() { SORTER_NAME = "AS1N" });
-            _sorters.Add(new SorterViewModel() { SORTER_NAME = "BS1N" });
-            _sorters.Add(new SorterViewModel() { SORTER_NAME = "CS1N" });
-            //_sorters = new SorterModel().GetList().Result;
+            _sorters = new SorterModel().GetList();
             foreach(SorterViewModel item in _sorters)
                 this.picker.Items.Add(item.SORTER_NAME);
             this.picker.SelectedIndex = 0;
@@ -34,7 +32,7 @@ namespace NativeSorterSummary.View
         {
             if (this.picker.SelectedIndex > -1)
             {
-                _sorters = new SorterModel().GetData(picker.Items[picker.SelectedIndex]);
+                _sorterSummary = new SorterModel().GetSummary(picker.Items[picker.SelectedIndex]);
             }
         }
 
